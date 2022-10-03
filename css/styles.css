@@ -834,7 +834,7 @@ body {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
+  
   margin-bottom: 12px;
   margin-top: 0;
   color: var(--primary-text-color);
@@ -941,31 +941,39 @@ textarea:focus {
   background-color: var(--button-color);
 }
 
-.check {
-  display: flex;
+/*checkbox*/
+
+
+.accept {
   margin-bottom: 30px;
-  justify-content: center;
+}
+
+/* checkbox */
+.checkbox {
+  display: flex;
   align-items: center;
-}
-.check label {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-
-  color: var(--secondary-text-color);
-}
-
-.check input {
   width: 16px;
   height: 15px;
-  border-radius: 2px;
   margin-right: 9px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 3px;
 }
 
-.check a {
+.checkbox-link {
+  margin-left: 3px;
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+.accept label {
+  display: flex;
+  align-items: center;
+}
+
+.accept input:checked+label .checkbox {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .close-button {
